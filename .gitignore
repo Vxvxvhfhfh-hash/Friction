@@ -1,0 +1,75 @@
+# Dépendances
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variables d'environnement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Sessions WhatsApp (contient des données sensibles)
+session/
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Fichiers de médias utilisateur (gardez la structure mais pas le contenu)
+media/images/*/
+media/audio/*/
+media/videos/*/
+!media/images/locations/.gitkeep
+!media/images/actions/.gitkeep
+!media/images/characters/.gitkeep
+!media/images/items/.gitkeep
+!media/images/weather/.gitkeep
+!media/audio/ambiance/.gitkeep
+!media/audio/effects/.gitkeep
+!media/videos/cutscenes/.gitkeep
+
+# Base de données générées
+data/characters.json
+media/media-database.json
+
+# Logs
+logs/
+*.log
+
+# Fichiers temporaires
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dossiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers de build
+dist/
+build/
+out/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Locks (optionnel - décommentez si vous voulez ignorer)
+# package-lock.json
+# yarn.lock
+
+# Fichiers de développement
+.eslintcache
+.env.test
