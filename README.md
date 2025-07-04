@@ -1,88 +1,96 @@
-# 🎭 WhatsApp RP Bot avec IA Gemini
+# 🎭 Application Web RP avec IA Gemini
 
-Un bot WhatsApp immersif pour jeu de rôle utilisant l'IA Gemini, avec système de médias contextuels et caractères spéciaux esthétiques.
+Une application web immersive de jeu de rôle utilisant l'IA Gemini, déployable sur Vercel avec système de médias contextuels et interface moderne.
 
 ## ✨ Fonctionnalités
 
 - 🤖 **IA Gemini intégrée** - Réponses narratives intelligentes et contextuelles
 - 🎮 **Système RP complet** - Personnages, statistiques, inventaire, lieux
-- 📱 **WhatsApp Web.js** - Intégration native WhatsApp
-- 🎨 **Médias immersifs** - Images, audio et vidéos contextuels automatiques
+- 🌐 **Interface web moderne** - Design responsif avec Tailwind CSS
+- 🎨 **Médias immersifs** - Images contextuelles automatiques via Unsplash
 - ✨ **Design esthétique** - Caractères spéciaux et formatage élégant
-- 📊 **Interface de monitoring** - Serveur web avec statistiques
-- ⏰ **Tâches automatisées** - Nettoyage et maintenance automatiques
+- � **Déployable sur Vercel** - Serverless functions et hosting statique
+- 📱 **Responsive** - Compatible desktop, tablette et mobile
 
 ## 📋 Prérequis
 
-- Node.js 16+ 
+- Compte [Vercel](https://vercel.com) gratuit
 - Compte Google pour l'API Gemini
-- WhatsApp sur smartphone pour la connexion
+- Node.js 16+ (pour développement local)
 
-## 🚀 Installation
+## 🚀 Déploiement Rapide sur Vercel
 
-### 1. Cloner le projet
+### Option 1 : Deploy Button (Le plus rapide)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/votre-repo/whatsapp-rp-bot)
+
+1. **Cliquer le bouton** ci-dessus
+2. **Connecter votre compte** GitHub/GitLab
+3. **Ajouter la variable d'environnement :**
+   - `GEMINI_API_KEY` = votre-clé-api-gemini
+4. **Cliquer "Deploy"**
+
+### Option 2 : Via GitHub
+
+1. **Fork ce repository**
+2. **Aller sur [vercel.com](https://vercel.com)**
+3. **New Project** → Importer votre fork
+4. **Ajouter la variable :** `GEMINI_API_KEY`
+5. **Deploy automatique !**
+
+### Option 3 : Développement Local
+
 ```bash
+# Cloner le projet
 git clone <repo-url>
 cd whatsapp-rp-bot
-```
 
-### 2. Installer les dépendances
-```bash
+# Installer les dépendances
 npm install
-```
 
-### 3. Configuration
-Créer un fichier `.env` basé sur `.env.example`:
-```bash
-cp .env.example .env
-```
+# Installer Vercel CLI
+npm install -g vercel
 
-Éditer le fichier `.env`:
-```env
-GEMINI_API_KEY=your-gemini-api-key-here
-PORT=3000
+# Démarrer en mode dev
+vercel dev
 ```
 
 ### 4. Obtenir une clé API Gemini
 1. Aller sur [Google AI Studio](https://makersuite.google.com/app/apikey)
 2. Créer une nouvelle clé API
-3. Copier la clé dans votre fichier `.env`
-
-### 5. Démarrer le bot
-```bash
-npm start
-```
-
-### 6. Scanner le QR Code
-1. Le bot affichera un QR Code dans le terminal
-2. Scanner avec WhatsApp sur votre smartphone
-3. Attendre la connexion
+3. L'ajouter comme variable d'environnement dans Vercel
 
 ## 🎮 Utilisation
 
-### Commandes de base
-- `/personnage` - Voir et choisir un personnage
-- `/choisir [nom]` - Sélectionner un personnage (aventurier, mage, voleur)
-- `/statut` - Afficher le statut du personnage
-- `/inventaire` - Voir l'inventaire
-- `/aide` - Afficher l'aide complète
+### Interface Web
+Une fois déployé, accédez à votre URL Vercel pour utiliser l'interface web moderne :
+
+1. **Sélection de personnage** - Cliquez sur un personnage dans le panneau de gauche
+2. **Chat immersif** - Tapez vos actions dans la zone de chat
+3. **Actions rapides** - Utilisez les boutons pour des actions communes
+4. **Médias automatiques** - Images contextuelles selon vos actions
+
+### Personnages Disponibles
+- 🗡️ **Aventurier Novice** - Guerrier équilibré pour débuter
+- 🧙‍♂️ **Mystique Érudit** - Mage puissant en magie
+- 🗡️ **Ombre Furtive** - Voleur agile et discret
 
 ### Gameplay
-1. **Choisir un personnage** avec `/personnage`
-2. **Décrire vos actions** en langage naturel
-3. **Le bot répond** avec des narrations immersives
-4. **Médias automatiques** selon le contexte (lieu, action, météo)
+1. **Choisir un personnage** en cliquant sur sa carte
+2. **Décrire vos actions** en langage naturel dans le chat
+3. **L'IA Gemini répond** avec des narrations immersives
+4. **Images automatiques** selon le contexte (lieu, action)
 
 ### Exemples d'interactions
 ```
-Joueur: "Je regarde autour de moi dans la taverne"
-Bot: [Narration avec bordures esthétiques + image de taverne]
+👤 Vous: "Je regarde autour de moi dans la taverne"
+🎭 GM: [Narration immersive avec bordures esthétiques + image de taverne]
 
-Joueur: "J'attaque le gobelin avec mon épée"
-Bot: [Narration de combat + image/son de combat]
+👤 Vous: "J'attaque le gobelin avec mon épée"
+🎭 GM: [Scène de combat épique + image d'action]
 
-Joueur: "Je lance un sort de feu"
-Bot: [Narration magique + effets visuels/sonores]
+👤 Vous: "Je lance un sort de feu"
+🎭 GM: [Narration magique + effets visuels]
 ```
 
 ## 🎨 Personnalisation
@@ -157,19 +165,19 @@ Accéder à `http://localhost:3000` pour:
 ## 📁 Structure du projet
 
 ```
-├── config/
-│   └── config.js          # Configuration générale
-├── utils/
-│   ├── geminiAI.js       # Intégration IA Gemini
-│   ├── mediaManager.js   # Gestionnaire de médias
-│   └── rpSystem.js       # Système de jeu de rôle
-├── data/
-│   └── characters.json   # Base de données des personnages
-├── media/                # Dossier des médias
-├── session/              # Sessions WhatsApp (auto-généré)
-├── index.js             # Fichier principal
-├── package.json         # Dépendances
-└── README.md           # Documentation
+├── api/                           # Fonctions serverless Vercel
+│   ├── health.js                 # Endpoint de santé
+│   ├── characters.js             # API des personnages
+│   ├── select-character.js       # Sélection de personnage
+│   ├── chat.js                   # Chat RP avec IA Gemini
+│   └── location-description.js   # Descriptions de lieux
+├── public/
+│   └── index.html                # Interface web principale
+├── vercel.json                   # Configuration Vercel
+├── package.json                  # Dépendances (allégées)
+├── README.md                     # Documentation
+├── DEPLOY_VERCEL.md             # Guide déploiement Vercel
+└── QUICK_START.md               # Guide démarrage rapide
 ```
 
 ## 🔧 Développement

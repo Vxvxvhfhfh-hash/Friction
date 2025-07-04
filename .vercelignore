@@ -1,0 +1,40 @@
+# Fichiers de développement
+*.md
+!README.md
+
+# Dossiers non nécessaires pour le déploiement
+node_modules/
+.git/
+.vscode/
+.idea/
+
+# Fichiers de configuration locale
+.env.local
+.env.development
+.env.test
+
+# Anciens fichiers du bot WhatsApp (non utilisés en version web)
+config/
+utils/
+data/
+media/
+session/
+scripts/
+index.js
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+.vercel/
+
+# Fichiers temporaires
+.DS_Store
+Thumbs.db
+
+# Tests et linting (si ajoutés plus tard)
+coverage/
+.nyc_output/
+jest.config.js
