@@ -2,7 +2,7 @@ const config = {
     // Configuration Gemini AI
     gemini: {
         apiKey: process.env.GEMINI_API_KEY || 'AIzaSyAZ2kEdV2msOk_oGozkExOXfxEaudOUFOA',
-        model: 'gemini-pro'
+        model: 'gemini-2.0-pro'
     },
 
     // Configuration WhatsApp
