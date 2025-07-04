@@ -1,7 +1,7 @@
 const config = {
     // Configuration Gemini AI
     gemini: {
-        apiKey: process.env.GEMINI_API_KEY || 'your-gemini-api-key-here',
+        apiKey: process.env.GEMINI_API_KEY || 'AIzaSyAZ2kEdV2msOk_oGozkExOXfxEaudOUFOA',
         model: 'gemini-pro'
     },
 
